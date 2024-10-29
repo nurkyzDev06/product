@@ -336,6 +336,7 @@ button {
     color: #22343D;
     width: 486px;
     padding-bottom: 30px;
+    margin: 0 auto;
 }
 
 .icons-one {
@@ -357,12 +358,14 @@ button {
     color: #22343D;
     width: 365px;
     padding-left: 30px;
+    /*margin: 0 auto;*/
 }
 
 .icons-general {
     display: flex;
     align-items: center;
     padding-bottom: 30px;
+    margin: 0 auto;
 }
 
 .icons-two {
@@ -432,7 +435,6 @@ button {
     text-align: left;
     color: #22343D;
     width: 486px;
-    height: 78px;
     padding-bottom: 30px;
 }
 
@@ -517,6 +519,7 @@ button {
     font-size: 34px;
     font-weight: 700;
     color: #22343D;
+    text-align: center;
 }
 
 .contents p {
@@ -524,6 +527,8 @@ button {
     font-weight: 500;
     color: #22343D;
     padding: 8px 0 33px 0;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .contents-block {
@@ -721,6 +726,7 @@ button {
     font-weight: 500;
     line-height: 28px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .say-general {
@@ -886,6 +892,7 @@ button {
     width: 280px;
     font-weight: 500;
     line-height: 30px;
+    margin: 0 auto;
 }
 
 .footer-inputs input {
