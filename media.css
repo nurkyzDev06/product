@@ -101,6 +101,9 @@
     .burger-menu {
         display: none;
     }
+    .burger-menu {
+        display: block;
+    }
 }
 
 
@@ -238,7 +241,6 @@
     .collaborative-text h6 {
     width: 400px;
     }
-}
     .process-image img {
         width: 92px;
         height: 92px;
@@ -249,7 +251,7 @@
         text-align: center;
     }
     .process-text h3 {
-       width: 80%;
+        width: 80%;
         font-size: 15px;
     }
     .contents p {
@@ -296,6 +298,11 @@
     .collaborative-text h1 {
         text-align: center;
         width: 400px;
+    }
+    .icons-general h4 {
+        text-align: center;
+        padding-left: 0;
+    }
 }
 
 @media (max-width: 400px){
