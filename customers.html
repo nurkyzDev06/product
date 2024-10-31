@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="media%20customer.css">
 </head>
 <body>
+
 <header id="header">
     <div class="container">
         <div class="header">
@@ -21,8 +22,8 @@
             </div>
             <div class="header-group">
                 <nav class="header-navbar">
-                    <a href="#">Product</a>
-                    <a href="index.html">Customers</a>
+                    <a href="index.html">Product</a>
+                    <a href="#">Customers</a>
                     <a href="#">Pricing</a>
                     <a href="#">Resources</a>
                 </nav>
@@ -32,6 +33,30 @@
                     <ion-icon name="contrast"></ion-icon>
                 </button>
             </div>
+            <div class="burger-menu">
+                <input type="checkbox" id="menu-toggle"/>
+                <label id="menu-button" class="menu-button" for="menu-toggle">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+                <div id="site-menu">
+                    <ul id="site-menu-titles">
+                        <li><p><a href="index.html">Product</a></p></li>
+                        <li><p><a href="#">Customers</a></p></li>
+                        <li><p><a href="#">Pricing</a></p></li>
+                        <li><p><a href="#">Resources</a></p></li>
+                        <li>
+                            <button class="btn-one">Sign In</button>
+                            <button class="btn-two">Sign Up</button>
+                            <button class="btn-three">
+                                <ion-icon name="contrast"></ion-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </header>
@@ -124,7 +149,7 @@
     <div class="container">
         <div class="completion">
             <div class="completion-general">
-                <img src="./img/completion-img.png" alt="img">
+                <img src="./img/completion-img.png" class="completion-img" alt="img">
                 <div class="completion-text">
                     <h4>STEP 3</h4>
                     <h5>Completion</h5>
@@ -184,7 +209,7 @@
     <div class="container">
         <div class="footer">
             <div class="footer-general">
-                <div class="footer-logo-group ">
+                <div class="footer-logo-group">
                     <div class="footer-logo">
                         <img src="./img/product-logo.svg" alt="img">
                         <h1>Product</h1>
@@ -227,12 +252,15 @@
                     </div>
                 </div>
             </div>
-            <h6>Made With Love By Figmaland All Right Reserved</h6>
+            <h6 class="footer-h6">Made With Love By Figmaland All Right Reserved</h6>
         </div>
     </div>
 </footer>
 
 
 
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -155,12 +155,14 @@
         text-align: center;
         margin: 0 auto;
     }
+    .footer-inputs {
+        padding: 20px 0;
+    }
     .footer-general {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+       justify-content: space-around;
         text-align: center;
-        padding: 20px 0;
     }
 }
 

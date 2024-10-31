@@ -5,51 +5,242 @@
 }
 
 @media (max-width: 1200px) {
-
+    .how-text h4 {
+        /*display: flex;*/
+        /*justify-content: center;*/
+    }
 }
 
 @media (max-width: 1024px) {
     .header-group {
         display: none;
+        .how-text p  {
+            width: 90%;
+
+        }
+        .pay-text p {
+            width: 90%;
+        }
+        .completion-text p {
+            width: 90%;
+        }
     }
 
-    .join img {
-        width: 360px;
-    }
     .join-block {
+        padding: 20px 0 20px 40px;
         width: 90%;
+    }
+
+    .join-block img {
+        width: 345px;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .blocks-general {
+        flex-wrap: wrap;
+    }
+    .special {
+        margin-bottom: 30px;
     }
 }
 
-@media (max-width: 992px) {
 
+@media (max-width: 992px) {
+    .blocks-general {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .how-text p {
+        width: 90%;
+    }
+
+    .pay-text p {
+        width: 90%;
+    }
+
+    .completion-text p {
+        width: 90%;
+    }
+
+    .special {
+        margin-bottom: 35px;
+    }
+
+    .join-block img {
+        width: 315px;
+
+    }
+    .special p {
+        width: 90%;
+    }
+    .footer h6 {
+        text-align: center;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 768px) {
     .clients-logo {
+        flex-wrap: wrap;
         display: flex;
         justify-content: space-evenly;
-        flex-wrap: wrap;
     }
-
-    .blocks-general {
+    .clients-logo img {
+        padding: 0 20px 30px 20px;
+    }
+    .how-general {
+        display: flex;
         flex-direction: column;
     }
-     .special {
-   margin: 30px 0;
+    .how-text h4 {
+        padding-top: 35px;
+    }
+    .how-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .completion-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .pay-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .pay-general {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .pay-text h4 {
+        padding-top: 35px;
+    }
+    .completion-general {
+        display: flex;
+        flex-direction: column;
+    }
+    .completion-text h4 {
+        padding-top: 35px;
+    }
+    .join-block {
+        padding: 30px 0;
+        flex-direction: column;
+        height: 100%;
+    }
+    .join-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .join-text h4 {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer-inputs {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-inputs h4 {
+        display: flex;
+        /*text-align: center;*/
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .footer-general {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .special p {
+        width: 90%;
+    }
+    .special h5 {
+        width: 90%;
+    }
 }
-     .how-img {
-         width: 60%;
-     }
-     .how-text p {
-         width:90%;
-     }
-     .pay-img {
-         width: 60%;
-     }
-     .pay-text p {
-         width: 90%;
-         margin: 0 auto;
-         padding: 0 20px 0 0;
-     }
+
+@media (max-width: 576px){
+    .clients-logo {
+        display: flex;
+        flex-wrap: wrap;
+       padding: 0 10px;
+
+    }
+    .clients-logo img {
+        margin: 0 0 35px 0;
+    }
+    .join-text h4 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px){
+    .how-general img {
+        width: 90%;
+    }
+    .pay-general img {
+        width: 90%;
+    }
+    .completion-general img {
+        width: 90%;
+    }
+    .thousand h1 {
+        width: 90%;
+    }
+    .block-business {
+        margin-bottom: 45px;
+    }
+    .footer-general {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .special p {
+        width: 90%;
+    }
+    footer h6 {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .footer-icon {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .footer-navbar {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 375px) {
+.special h5 {
+    width: 90%;
+}
+    .footer-inputs h4 {
+        width: 85%;
+    }
+.footer-inputs input {
+    width: 85%;
+}
+
+}
+
+@media (max-width: 320px) {
+
 }

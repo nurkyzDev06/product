@@ -24,6 +24,9 @@ button {
 }
 
 #header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
     background: white;
     box-shadow: 0 0 0 1px #02897A;
     padding: 20px 0;

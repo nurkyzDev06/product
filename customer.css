@@ -96,10 +96,173 @@ button {
     align-items: center;
     justify-content: center;
 }
+#site-menu li, #site-menu p {
+    padding: 10px;
+    margin: 0px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    display: none;
+    text-align: center;
+    transition: all .5s;
+    /* Credit to Mike for the responsive font-sizing https://www.madebymike.com.au/writing/fluid-type-calc-examples/ */
+    font-size: calc(20px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+}
 
+#site-menu p:hover {
+    display: block;
+    color: #5bc1e8;
+    transition: all .5s;
+    font-weight:bold;
+}
+
+/* hides toggle handler */
+[type="checkbox"]:checked, [type="checkbox"]:not(:checked) {
+    display: none;
+}
+
+/* menu button & animation */
+.menu-button {
+    position: absolute;
+    right:0px;
+    top: 17px;
+    z-index: 100;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.line {
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: #02897A;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.line:nth-child(1) {
+    top: 35%;
+}
+
+.line:nth-child(2) {
+    top: 45%;
+}
+
+.line:nth-child(3) {
+    top: 55%;
+}
+
+/* animate background of lines */
+.menu-button:hover .line::after {
+    transform: translateX(0);
+}
+
+.menu-button .line::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    /*background: rgba(255, 255, 255,1);*/
+    transform: translateX(100%);
+    transition: all 0.25s ease;
+}
+
+#menu-toggle:checked + .menu-button .line::after {
+    background: rgba(91, 193, 232,1);
+}
+
+#menu-toggle:checked + .menu-button  {
+    transform: rotate(180deg);
+    transition: transform .2s ease;
+}
+
+#menu-toggle:checked + #menu-button .line:nth-child(1){
+    transform: translateY(5px) rotate(45deg);/*45deg*/
+}
+
+
+#menu-toggle:checked + #menu-button .line:nth-child(2) {
+    transform: scaleX(0);
+    opacity:0;
+}
+
+#menu-toggle:checked + #menu-button .line:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);/* -45deg*/
+}
+
+
+/* animate menu in */
+#menu-toggle:checked + #menu-button + #site-menu{
+    animation: menu-open 2s ease both;
+
+}
+
+#menu-toggle:checked + #menu-button + #site-menu ul > li, #site-menu p {
+    display: block;
+    animation: menu-txt-open 2.5s ease both;
+}
+
+#site-menu {
+    position: absolute;
+    width: 0px;
+    height: 100vh;
+    right:0px;
+    top:0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+    animation: menu-closed .3s both;
+
+    transition: .2s;
+}
+
+#site-menu-titles{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.burger-menu {
+    display: none;
+}
+
+@keyframes menu-open {
+    100% {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+@keyframes menu-closed {
+    0% {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+@keyframes menu-txt-open {
+    0%, 70% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
 
 #clients {
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .clients h1 {
@@ -117,18 +280,17 @@ button {
 }
 
 #why {
-    padding: 100px 0;
+    padding: 30px 0 68px 0;
     background:#F5F5F5;
-
 }
+
+
 
 .why h1 {
     color: #22343D;
     font-size: 34px;
     font-weight: 700;
     text-align: center;
-
-
 }
 
 .blocks-general {
@@ -145,8 +307,6 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
 }
 
 .special h5  {
@@ -163,9 +323,8 @@ button {
     font-size: 16px;
     font-weight: 400;
     line-height: 27px;
-    letter-spacing: 0.20000000298023224px;
     text-align: center;
-
+    width: 275px;
 }
 
 
@@ -183,25 +342,28 @@ button {
 .how-general {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
 }
 
 .how h1 {
-    color: #22343D;
     font-size: 34px;
     font-weight: 700;
-    text-align: center;
     padding: 0 0 73px 0;
+    text-align: center;
+
 
 }
+.how-text h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #22343D;
 
+}
 .how-text h5 {
     color: #22343D;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 16px 0 16px 0;
-
 }
 
 .how-text p {
@@ -209,9 +371,9 @@ button {
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     width: 438px;
     padding-top: 16px;
+    margin: 0 auto;
 
 }
 
@@ -223,7 +385,7 @@ button {
 .pay-general {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 
@@ -233,14 +395,12 @@ button {
     font-size: 20px;
     font-weight: 500;
     padding-bottom: 16px;
-
 }
 
 .pay-text h5 {
     color: #22343D;
     font-size: 24px;
     font-weight: 600;
-
 
 }
 
@@ -249,10 +409,9 @@ button {
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    text-align: left;
     width: 438px;
     padding-top: 16px;
-
+    margin: 0 auto;
 
 }
 
@@ -270,7 +429,7 @@ button {
 .completion-general {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-bottom: 70px;
 }
 
@@ -278,14 +437,12 @@ button {
     font-size: 20px;
     font-weight: 500;
     color: #22343D;
-    text-align: center;
 }
 
 .completion-text h5 {
     font-size: 24px;
     font-weight: 600;
      color: #22343D;
-    text-align: center;
     padding: 16px 0 16px 0;
 }
 
@@ -337,6 +494,12 @@ button {
     padding-top: 60px;
 }
 
+.block-business {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
 .block-business h3 {
     color: #22343D;
@@ -388,10 +551,10 @@ button {
     font-size: 32px;
     font-weight: 600;
     line-height: 48.45px;
-    text-align: left;
     color: white;
-    width: 510px;
+    width: 490px;
     padding: 0 0 48px 0;
+    margin: 0 auto;
 }
 
 .join-text button {
@@ -476,7 +639,6 @@ button {
     width: 280px;
     font-weight: 500;
     line-height: 30px;
-    margin: 0 auto;
 }
 
 .footer-inputs input {
@@ -509,3 +671,4 @@ button {
     color: #22343D;
     font-weight: 400;
 }
+
